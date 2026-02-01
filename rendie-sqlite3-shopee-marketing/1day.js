@@ -1,7 +1,8 @@
 import puppeteer from 'puppeteer';
 import path from 'path';
 (async () => {
-  const pathToExtension = path.join(process.cwd(), 'rendie-chrome');
+  const pathToExtension = path.join(process.cwd(),"../","../",'rendie-chrome');
+  console.log("rendie插件位置："+pathToExtension);
   const browser = await puppeteer.launch({
     args: [
       '--disable-blink-features=AutomationControlled',//就能轻松移除上一节介绍的 navigator.webdriver = true 属性  https://www.webhek.com/post/detecting-headless-chrome-puppeteer-2024/
@@ -52,7 +53,7 @@ import path from 'path';
   await page.goto(url);
   /////////////////////////////////// 
   let count = 0;
-  let total =  (60*40) / 10//最多运行40分钟
+  let total =  (10) / 10//最多运行40分钟   ---60*40
   let Enable = true;
   while (Enable) {
     count++
