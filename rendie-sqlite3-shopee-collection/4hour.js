@@ -1,7 +1,8 @@
 import puppeteer from 'puppeteer';
 import path from 'path';
 (async () => {
-  const pathToExtension = path.join("../","../",process.cwd(), 'rendie-chrome');
+  const pathToExtension = path.join("../",process.cwd(), 'rendie-chrome');
+  console.log(pathToExtension);
   const browser = await puppeteer.launch({
     args: [
       '--disable-blink-features=AutomationControlled',//就能轻松移除上一节介绍的 navigator.webdriver = true 属性  https://www.webhek.com/post/detecting-headless-chrome-puppeteer-2024/
