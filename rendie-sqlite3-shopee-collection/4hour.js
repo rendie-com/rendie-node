@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 import path from 'path';
 (async () => {
-  const pathToExtension = path.join("../",process.cwd(), 'rendie-chrome');
+  const pathToExtension = path.join(process.cwd(),"../","../" 'rendie-chrome');
   console.log("rendie插件位置："+pathToExtension);
   const browser = await puppeteer.launch({
     args: [
